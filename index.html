@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Loading...</title>
+<meta name="theme-color" content="#0F0F0F">
+<meta name="color-scheme" content="dark">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Cormorant+Garamond:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/common.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/extras.css">
+</head>
+<body class="home">
+<h1 class="sr-only">Handmade crochet</h1>
+<noscript><p style="position:fixed;z-index:9999;inset:auto 0 0 0;margin:0;padding:14px 18px;background:#F4C2C2;color:#0F0F0F;font:600 14px system-ui,sans-serif;text-align:center">This site needs JavaScript turned on.</p></noscript>
+<canvas id="bg"></canvas>
+<svg id="deco" aria-hidden="true"></svg>
+<div class="stage"><canvas id="c" aria-hidden="true"></canvas></div>
+<div id="hint" role="button" tabindex="0" aria-label="Scroll to begin"><span class="tx" id="hintT">scroll</span><i class="ch"></i><i class="ch"></i></div>
+<button id="skip" type="button">Skip to shop <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+<div id="cream"></div>
+<div id="shop"><div id="shopIn"><div class="sh"><div class="eb">Collection</div><h2>Our picks</h2><p></p></div><nav id="cats" aria-label="Categories"></nav><div id="grid"></div><div id="nores" hidden>No cuties found. Try another word.</div>
+<div class="ft"></div></div></div>
+<header id="hd"><div class="hi"><a class="br" data-go="shop" role="link" tabindex="0" aria-label="Home"></a><nav class="dn" aria-label="Main"><a data-go="shop" role="link" tabindex="0">Collection</a><a data-go="anya" role="link" tabindex="0">Ask us</a>
+
+<a href="#" data-ig target="_blank" rel="noopener">Instagram</a></nav>
+<div class="ha"><button class="sq" id="sBtn" type="button" aria-label="Search products"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button><button class="cb" id="cartBtn" type="button" aria-label="View shopping bag"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span>Bag</span><span class="cc" id="cc">0</span></button><button class="mb" id="mb" type="button" aria-label="Open menu" aria-controls="menu"><i></i><i></i><i></i></button></div></div></header>
+<div id="sbar"><div class="si"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="sIn" type="search" placeholder="Search..." aria-label="Search products" enterkeyhint="search" autocomplete="off" autocapitalize="off" spellcheck="false"><button type="button" id="sX" aria-label="Close search">&times;</button></div></div>
+<div class="bk" id="bk"></div>
+<aside class="dr" id="menu" aria-label="Menu" aria-hidden="true"><div class="mn">
+<div class="mn-top"><a class="br" data-go="shop" role="link" tabindex="0" aria-label="Home"></a><button class="x" type="button" data-close aria-label="Close menu">&times;</button></div>
+<p class="mn-eb">Explore</p>
+<nav class="mn-links" aria-label="Menu"><a class="mn-l" style="--d:0" data-go="shop" role="link" tabindex="0"><i>01</i><span><b>Collection</b><small>Browse every handmade piece</small></span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="mn-l" style="--d:1" data-go="anya" role="link" tabindex="0"><i>02</i><span><b>Ask us</b><small>Our little shop helper</small></span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</nav>
+<div class="mn-card"><div class="mn-box"><p>Made by hand, one stitch at a time.</p>
+<div class="mn-act"><a class="fill" href="#" data-ig target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg> Instagram</a><a href="https://wa.me/" data-wa="" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z"/></svg> WhatsApp</a></div></div>
+<div class="mn-foot"><span>&copy; <span data-year></span> <span data-name></span></span></div></div>
+</div></aside>
+<aside class="dr" id="cart" aria-label="Shopping bag" aria-hidden="true"><div class="dh"><h3>Your Bag</h3><button class="x" type="button" data-close aria-label="Close bag">&times;</button></div><div class="ci2" id="items"></div>
+<div class="cf" id="cf" style="display:none"><div class="tr"><span>Total</span><span id="tot">&#8377;0</span></div><p class="nt" id="ship"></p>
+<button class="b p" type="button" id="wa"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z"/></svg><span>Send Bag to WhatsApp</span></button></div></aside>
+<div id="pd" aria-hidden="true" role="dialog" aria-label="Product details"><div class="pdi" id="pdi"></div></div>
+<div id="tg" role="status" aria-live="polite"></div>
+<canvas id="fx" aria-hidden="true"></canvas>
+<div id="bot"><img alt="Shop helper"></div><div id="tip">Ask me anything</div>
+<div id="chat" role="dialog" aria-label="Chat"><div id="ch-h"><span>Helper</span><button id="ch-x" type="button" aria-label="Close chat">&times;</button></div><div id="ch-m" aria-live="polite"></div><div id="ch-c"></div><div id="ch-i"><input id="ch-in" placeholder="Ask us..." autocomplete="off" aria-label="Message"><button id="ch-s" type="button">Send</button></div></div>
+<script src="site-config.js"></script>
+<script src="assets/js/template.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/extras.js"></script>
+</body>
+</html>
